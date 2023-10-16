@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.latesttechstackpoc.features.home.DetailsScreen
 import com.example.latesttechstackpoc.features.home.GalleryPhotos
 import com.example.latesttechstackpoc.features.home.GalleryVideos
 import com.example.latesttechstackpoc.features.home.HomeScreen
