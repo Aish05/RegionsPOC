@@ -1,6 +1,7 @@
 package com.example.latesttechstackpoc
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,6 +16,7 @@ import com.example.latesttechstackpoc.ui.theme.LatestTechStackPocTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("BASE_URL",  BuildConfig.BASE_URL)
         setContent {
             LatestTechStackPocTheme {
                 // A surface container using the 'background' color from the theme

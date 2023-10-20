@@ -1,3 +1,6 @@
+import com.example.latesttechstackpoc.flavor.getFlavorProperties
+import com.example.latesttechstackpoc.flavor.Flavor
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -33,16 +36,21 @@ android {
     }
     flavorDimensions += "default"
     productFlavors {
-        create("US") {
+        create(Flavor.US.country) {
             applicationIdSuffix = ".us"
         }
-        create("EU") {
+        create(Flavor.EU.country) {
             applicationIdSuffix = ".eu"
         }
     }
 
     applicationVariants.all {
-        val buildTypeName = buildType.name
+
+        // Use flavorName to get the flavor-specific properties
+        val flavorProperties = getFlavorProperties(flavorName)
+
+        // Set the flavor-specific implementation in BuildConfig
+        buildConfigField( "String", "BASE_URL", "\"${flavorProperties.commonConfig.baseUrl}\"")
     }
 
     compileOptions {
@@ -54,6 +62,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
