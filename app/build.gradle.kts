@@ -51,6 +51,7 @@ android {
 
         // Set the flavor-specific implementation in BuildConfig
         buildConfigField( "String", "BASE_URL", "\"${flavorProperties.commonConfig.baseUrl}\"")
+        mergedFlavor.manifestPlaceholders["googleMapsApiKey"] = flavorProperties.commonConfig.mapsKey
     }
 
     compileOptions {

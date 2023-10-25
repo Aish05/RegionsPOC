@@ -11,9 +11,25 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.latesttechstackpoc.common.AddressValidator
+import com.example.latesttechstackpoc.common.ColorConfig
+import com.example.latesttechstackpoc.common.PaymentGatewayConfig
 import com.example.latesttechstackpoc.ui.theme.LatestTechStackPocTheme
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var paymentGatewayConfig: PaymentGatewayConfig
+
+    @Inject
+    lateinit var colorConfig: ColorConfig
+
+    @Inject
+    lateinit var addressValidator: AddressValidator
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("BASE_URL",  BuildConfig.BASE_URL)
