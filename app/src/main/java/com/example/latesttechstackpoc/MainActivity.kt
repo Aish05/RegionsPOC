@@ -21,15 +21,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    @Inject
-    lateinit var paymentGatewayConfig: PaymentGatewayConfig
-
-    @Inject
-    lateinit var colorConfig: ColorConfig
-
-    @Inject
-    lateinit var addressValidator: AddressValidator
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("BASE_URL",  BuildConfig.BASE_URL)
