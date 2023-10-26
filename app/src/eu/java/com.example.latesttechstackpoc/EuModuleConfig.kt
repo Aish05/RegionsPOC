@@ -33,7 +33,7 @@ object EuModuleConfig {
         return when(country.getCountry().code) {
             "FR" -> ColorConfig(Color.CYAN, Color.RED)
             "UK" -> ColorConfig(Color.RED, Color.RED)
-            "DE" -> ColorConfig(Color.BLUE, Color.RED)
+            "DE" -> ColorConfig(Color.YELLOW, Color.RED)
             else -> {
                 ColorConfig(Color.CYAN, Color.RED)
             }
