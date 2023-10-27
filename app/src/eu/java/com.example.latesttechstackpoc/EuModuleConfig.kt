@@ -19,7 +19,7 @@ object EuModuleConfig {
     @Provides
     fun providePaymentGatewayConfig(country: CountryRepository): PaymentGatewayConfig {
         return when(country.getCountry().code) {
-            "FR" -> EuPaymentGatewayConfig()
+            "FR" -> FrPaymentGatewayConfig()
             "UK" -> EuPaymentGatewayConfig()
             "DE" -> EuPaymentGatewayConfig()
             else -> {

@@ -12,3 +12,10 @@ class EuPaymentGatewayConfig : PaymentGatewayConfig {
         GatewayType.ADYEN
     )
 }
+
+class FrPaymentGatewayConfig : PaymentGatewayConfig {
+    override val gatewayType: Set<GatewayType> = setOf(
+        GatewayType.DEBIT_CARD,
+        GatewayType.CREDIT_CARD,
+    )
+}
