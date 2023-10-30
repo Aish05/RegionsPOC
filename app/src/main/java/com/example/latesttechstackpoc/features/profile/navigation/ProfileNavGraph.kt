@@ -6,7 +6,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.latesttechstackpoc.features.home.DetailsScreen
-import com.example.latesttechstackpoc.features.profile.ProfileScreen
+import com.example.latesttechstackpoc.ProfileScreen
 import com.example.latesttechstackpoc.navigation.bottom_nav.MainDestinations
 
 const val PROFILE_GRAPH_ROUTE = "profile"

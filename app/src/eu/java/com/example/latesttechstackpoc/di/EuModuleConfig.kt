@@ -1,16 +1,15 @@
-package com.example.latesttechstackpoc
+package com.example.latesttechstackpoc.di
 
 import android.graphics.Color
+import com.example.latesttechstackpoc.DynamicCountryRepository
 import com.example.latesttechstackpoc.common.AddressValidator
 import com.example.latesttechstackpoc.common.ColorConfig
 import com.example.latesttechstackpoc.common.CountryRepository
 import com.example.latesttechstackpoc.common.PaymentGatewayConfig
-import com.example.latesttechstackpoc.model.Country
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)

@@ -1,4 +1,4 @@
-package com.example.latesttechstackpoc
+package com.example.latesttechstackpoc.di
 
 import com.example.latesttechstackpoc.common.GatewayType
 import com.example.latesttechstackpoc.common.PaymentGatewayConfig
