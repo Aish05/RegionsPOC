@@ -7,13 +7,13 @@ enum class Flavor(val country: String) {
     CA("ca")
 }
 
-fun getFlavorProperties(flavorName: String): AppConfig {
+fun getFlavorProperties(flavorName: String): AppBuildConfig {
     return when (flavorName) {
-        Flavor.US.country -> AppConfig.US(USConfig())
-        Flavor.EU.country -> AppConfig.EU(EUConfig())
-        Flavor.UK.country -> AppConfig.UK(UKConfig())
-        Flavor.CA.country -> AppConfig.CA(CAConfig())
+        Flavor.US.country -> AppBuildConfig.US(USConfig())
+        Flavor.EU.country -> AppBuildConfig.EU(EUConfig())
+        Flavor.UK.country -> AppBuildConfig.UK(UKConfig())
+        Flavor.CA.country -> AppBuildConfig.CA(CAConfig())
         // Add cases for other flavor-specific configurations
-        else -> AppConfig.US(USConfig()) // Provide a default implementation
+        else -> AppBuildConfig.US(USConfig()) // Provide a default implementation
     }
 }

@@ -1,13 +1,13 @@
 package com.example.latesttechstackpoc.flavor
 
 
-sealed class AppConfig {
+sealed class AppBuildConfig {
     abstract val commonConfig: CommonConfig
 
-    data class US(override val commonConfig: CommonConfig) : AppConfig()
-    data class UK(override val commonConfig: CommonConfig) : AppConfig()
-    data class EU(override val commonConfig: CommonConfig) : AppConfig()
-    data class CA(override val commonConfig: CommonConfig) : AppConfig()
+    data class US(override val commonConfig: CommonConfig) : AppBuildConfig()
+    data class UK(override val commonConfig: CommonConfig) : AppBuildConfig()
+    data class EU(override val commonConfig: CommonConfig) : AppBuildConfig()
+    data class CA(override val commonConfig: CommonConfig) : AppBuildConfig()
 }
 
 

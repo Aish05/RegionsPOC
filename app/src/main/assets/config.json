@@ -1,0 +1,10 @@
+{
+  "us": {
+    "showGuide": true,
+    "showCheckbox": false
+  },
+  "eu": {
+    "showGuide": false,
+    "showCheckbox": true
+  }
+}
